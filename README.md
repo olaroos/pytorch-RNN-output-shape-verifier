@@ -12,5 +12,5 @@ hidden  =  hidden.view(nlayers, ndirects, bs,       hidden_size)</br>
 outputs = outputs.view(seqlen,  bs,       ndirects, hidden_size)</br>
 hidden  =  hidden.view(nlayers, ndirects, bs,       hidden_size)</br>
 
-**If the sequence-length is larger than 1, pytorch will throw an error if outputs is view-split incorrectly**</br>
-**Pytorch will not throw an error when view-splitting the hidden-state**
+**view-splitting outputs incorrectly will throw an error if seqlen > 1**</br>
+**view-splitting hidden incorrectly will not throw an error**
